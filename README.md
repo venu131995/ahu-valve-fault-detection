@@ -35,6 +35,16 @@ flagged when at least two hours are.
 * **Valve feedback**: |position - command| > 0.05.
 * **Energy**: fan power summed over the year; coil load = supply airflow x (MA - SA), sensible part, relative units.
 
+## Tests (`pytest tests`, 5)
+
+| Check | Result |
+|---|---|
+| Mixing balance recovers a known outdoor-air fraction | within 0.001 |
+| Healthy unit | no flags |
+| Damper admitting far more outdoor air than commanded | damper flag every day, nothing else |
+| Valve that stays 10 % open at zero command (the data set's leak) | position flag only; invisible to the coil rule |
+| Cooling with the valve commanded closed | leak flag every day |
+
 ## Limitations
 
 * Simulated data from one building and one climate; real buildings add sensor noise and drift, and their faults
@@ -46,8 +56,9 @@ flagged when at least two hours are.
 
 ## Run
 
-    pip install numpy pandas matplotlib
+    pip install numpy pandas matplotlib pytest
     # data: https://fdddata.lbl.gov/data/Simulated_LBNL_FDD_Data_Sets_SDAHU/LBNL_FDD_Data_Sets_SDAHU.zip -> data/
     python scripts/run_all.py
+    pytest tests
 
 Results: `results/summary.json`. Figure: `figures/detection_energy.png`.
