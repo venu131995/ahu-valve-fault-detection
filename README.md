@@ -13,13 +13,13 @@ reference building), a fault-free year and 20 faulted years, 30 points each.
 |---|---|
 | Is the public data set usable as is? | **Partly.** The four "coil valve leaking 10/25/40/50 %" files are byte-identical (only 10 % is real), and so are the four outdoor-air sensor bias files, which also show **no bias** at all. Outdoor airflow is a constant (357,730), and the static-pressure set point is swapped or garbage (-400) in every fault file. The "coi_bias" files do not match the documented supply-air bias. 9 of the 21 cases are used. |
 | Stuck coil valve | Found from building-system points alone on **82-100 %** of days (supply air too warm with the valve commanded fully open, or cooling while commanded closed); position feedback lifts the 10 % and 25 % cases to 100 %. |
-| Leaking coil valve (10 %) | **Invisible** to the building-system points (1 % of days, at the false-alarm level) but flagged on **40 %** of days when the valve reports its position. |
+| Leaking coil valve (10 %) | The data set models this "leak" as a valve that never closes below 10 % when the control signal is zero (minimum position, per the LBNL documentation). **Invisible** to the building-system points (1 % of days, at the false-alarm level) but flagged on **40 %** of days when the valve reports its position. Seat leakage behind a fully closed stem would not show in a position signal; it needs a flow measurement. |
 | Stuck outdoor-air damper | Mixed-air balance inconsistent with the damper command: **48 %** of days when stuck near closed (the economiser days, when it should open), **97 %** when stuck at 75 %. |
 | What do they cost? | Damper stuck at 10-25 %: **+52-56 % cooling coil load** (lost free cooling). Coil valve stuck at 75 %: **+48 %** coil load (overcooling). Valve stuck at 10-25 %: coil load -44 to -58 % but **fan energy +12-25 %** and supply air too warm (comfort lost). Damper stuck at 75 %: fan energy +18 %. |
 | False alarms | 3 of 151 fault-free days (July-December, model fitted on January-June). |
 
 The case for valve feedback is clearest for the leak: a valve that does not fully close looks normal to the building
-system, but its position signal reveals it at once.
+system, but its position signal reveals it at once (and a flow signal would also catch leakage past a closed seat).
 
 ## Method
 
