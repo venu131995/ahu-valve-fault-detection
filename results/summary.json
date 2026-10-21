@@ -1,0 +1,161 @@
+{
+ "audit": {
+  "duplicate_groups": [
+   [
+    "coi_leakage_010_annual",
+    "coi_leakage_025_annual",
+    "coi_leakage_040_annual",
+    "coi_leakage_050_annual"
+   ],
+   [
+    "oa_bias_-2_annual",
+    "oa_bias_-4_annual",
+    "oa_bias_2_annual",
+    "oa_bias_4_annual"
+   ]
+  ],
+  "constant_columns": [
+   "OA_CFM",
+   "SA_SPSPT",
+   "SA_TEMPSPT",
+   "SF_SPD"
+  ],
+  "oa_bias_2_minus_other_fault_file_OA_TEMP_degF": 0.0,
+  "sa_spspt_fault_free_median": 1.60746,
+  "sa_spspt_fault_files_median": -400.25253,
+  "sa_sp_fault_free_median": 403.41081499999996
+ },
+ "model": {
+  "dT_closed_q99_F": 1.1193167000000124,
+  "dT_closed_median_F": -1.041176
+ },
+ "false_alarm_days_fault_free_JulDec": {
+  "damper": 3,
+  "leak": 0,
+  "starve": 0,
+  "position": 0
+ },
+ "fault_free_days_JulDec": 151,
+ "fault_free_energy": {
+  "fan_kwh": 3955.9986630090348
+ },
+ "faults": {
+  "coi_leakage_010": {
+   "days": 151,
+   "basic_any": 0.013245033112582781,
+   "by_rule": {
+    "damper": 0.013245033112582781,
+    "leak": 0.0,
+    "starve": 0.0,
+    "position": 0.3973509933774834
+   },
+   "smart_valve": 0.3973509933774834,
+   "fan_energy_change_pct": -9.800093655916752,
+   "coil_load_change_pct": 0.6080643325554247
+  },
+  "coi_stuck_010": {
+   "days": 151,
+   "basic_any": 0.8344370860927153,
+   "by_rule": {
+    "damper": 0.019867549668874173,
+    "leak": 0.0,
+    "starve": 0.8344370860927153,
+    "position": 1.0
+   },
+   "smart_valve": 1.0,
+   "fan_energy_change_pct": 24.792212248752186,
+   "coil_load_change_pct": -58.46109321633701
+  },
+  "coi_stuck_025": {
+   "days": 151,
+   "basic_any": 0.8211920529801324,
+   "by_rule": {
+    "damper": 0.019867549668874173,
+    "leak": 0.0,
+    "starve": 0.8211920529801324,
+    "position": 1.0
+   },
+   "smart_valve": 1.0,
+   "fan_energy_change_pct": 12.252917331602674,
+   "coil_load_change_pct": -44.41902722772222
+  },
+  "coi_stuck_050": {
+   "days": 151,
+   "basic_any": 1.0,
+   "by_rule": {
+    "damper": 0.013245033112582781,
+    "leak": 0.45695364238410596,
+    "starve": 0.695364238410596,
+    "position": 1.0
+   },
+   "smart_valve": 1.0,
+   "fan_energy_change_pct": -9.9403635196048,
+   "coil_load_change_pct": -7.644119646955206
+  },
+  "coi_stuck_075": {
+   "days": 151,
+   "basic_any": 1.0,
+   "by_rule": {
+    "damper": 0.019867549668874173,
+    "leak": 1.0,
+    "starve": 0.0,
+    "position": 1.0
+   },
+   "smart_valve": 1.0,
+   "fan_energy_change_pct": -5.706467571297457,
+   "coil_load_change_pct": 47.762000119787885
+  },
+  "damper_stuck_010": {
+   "days": 151,
+   "basic_any": 0.4768211920529801,
+   "by_rule": {
+    "damper": 0.4768211920529801,
+    "leak": 0.0,
+    "starve": 0.0,
+    "position": 0.0
+   },
+   "smart_valve": 0.4768211920529801,
+   "fan_energy_change_pct": -22.415172733491595,
+   "coil_load_change_pct": 55.898002848428696
+  },
+  "damper_stuck_025": {
+   "days": 151,
+   "basic_any": 0.4768211920529801,
+   "by_rule": {
+    "damper": 0.4768211920529801,
+    "leak": 0.0,
+    "starve": 0.0,
+    "position": 0.0
+   },
+   "smart_valve": 0.4768211920529801,
+   "fan_energy_change_pct": -17.373350966036238,
+   "coil_load_change_pct": 51.507040724676976
+  },
+  "damper_stuck_075": {
+   "days": 151,
+   "basic_any": 0.9668874172185431,
+   "by_rule": {
+    "damper": 0.9668874172185431,
+    "leak": 0.0,
+    "starve": 0.0,
+    "position": 0.0
+   },
+   "smart_valve": 0.9668874172185431,
+   "fan_energy_change_pct": 18.258412812238923,
+   "coil_load_change_pct": -12.358102884489119
+  },
+  "damper_stuck_100": {
+   "days": 179,
+   "basic_any": 0.9776536312849162,
+   "by_rule": {
+    "damper": 0.9776536312849162,
+    "leak": 0.0,
+    "starve": 0.0,
+    "position": 0.0
+   },
+   "smart_valve": 0.9776536312849162,
+   "fan_energy_change_pct": null,
+   "coil_load_change_pct": null
+  }
+ }
+}
